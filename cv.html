@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soumya Ranjan Rout · CV</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f0f2f5;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1e2b3c;
+            line-height: 1.6;
+            padding: 2.5rem 1.5rem;
+        }
+        .cv-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            padding: 3rem 3.5rem;
+        }
+
+        /* ===== HEADER ===== */
+        .cv-header {
+            text-align: center;
+            border-bottom: 2px solid #1a2a3a;
+            padding-bottom: 1.2rem;
+            margin-bottom: 1.8rem;
+        }
+        .cv-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0a1a2b;
+            letter-spacing: -0.02em;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+        }
+        .cv-header .contact-line {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 2rem;
+            margin-top: 0.3rem;
+            font-size: 1rem;
+            color: #1f3d5c;
+        }
+        .cv-header .contact-line a {
+            color: #1a3a5c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .cv-header .contact-line a:hover {
+            text-decoration: underline;
+            color: #0f4a73;
+        }
+        .cv-header .contact-line i {
+            margin-right: 0.4rem;
+            color: #1a3a5c;
+            width: 1.2rem;
+        }
+        .cv-header .contact-line .sep {
+            color: #b0c4d8;
+            font-weight: 300;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0a1a2b;
+            border-bottom: 2px solid #1a2a3a;
+            padding-bottom: 0.25rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+        }
+        .section-title i {
+            color: #1a3a5c;
+            margin-right: 0.6rem;
+            font-size: 1.1rem;
+            width: 1.6rem;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4rem 2rem;
+            padding: 0.2rem 0;
+        }
+        .skills-block .skill-line {
+            display: flex;
+            align-items: baseline;
+            gap: 0.3rem;
+            font-size: 0.98rem;
+            color: #1f3d5c;
+            padding: 0.15rem 0;
+        }
+        .skills-block .skill-line .label {
+            font-weight: 600;
+            color: #0a1a2b;
+            min-width: 120px;
+        }
+        .skills-block .skill-line .label i {
+            color: #1a3a5c;
+            width: 1.3rem;
+            margin-right: 0.2rem;
+        }
+        .skills-block .skill-line .value {
+            color: #1f3d5c;
+        }
+
+        /* ===== PROJECTS ===== */
+        .project-item {
+            margin-bottom: 1.2rem;
+            padding-left: 0.2rem;
+        }
+        .project-item .project-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 0.3rem 1rem;
+            margin-bottom: 0.1rem;
+        }
+        .project-item .project-head .title {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #0a1a2b;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+        }
+        .project-item .project-head .tech {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1a3a5c;
+            font-style: italic;
+            background: #eef2f6;
+            padding: 0.05rem 1rem;
+            border-radius: 30px;
+            letter-spacing: 0.2px;
+        }
+        .project-item ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.1rem;
+        }
+        .project-item ul li {
+            padding: 0.1rem 0 0.1rem 1.6rem;
+            position: relative;
+            color: #1f3d5c;
+            font-size: 0.97rem;
+        }
+        .project-item ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0.2rem;
+            color: #1a3a5c;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* ===== CERTIFICATIONS ===== */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 1.5rem;
+        }
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.97rem;
+            color: #1f3d5c;
+            padding: 0.2rem 0;
+        }
+        .cert-item i {
+            color: #1a3a5c;
+            font-size: 1.1rem;
+            width: 1.5rem;
+            text-align: center;
+        }
+
+        /* ===== EDUCATION ===== */
+        .edu-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #e8edf2;
+        }
+        .edu-item:last-child {
+            border-bottom: none;
+        }
+        .edu-item .edu-left {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .edu-item .edu-left i {
+            color: #1a3a5c;
+            font-size: 1rem;
+            width: 1.4rem;
+        }
+        .edu-item .edu-left strong {
+            color: #0a1a2b;
+            font-size: 1.02rem;
+            font-weight: 700;
+        }
+        .edu-item .meta {
+            color: #3f5f81;
+            font-size: 0.95rem;
+        }
+
+        /* ===== EXTRA CURRICULAR ===== */
+        .extra-list {
+            list-style: none;
+            padding: 0;
+        }
+        .extra-list li {
+            padding: 0.3rem 0 0.3rem 1.8rem;
+            position: relative;
+            color: #1f3d5c;
+            font-size: 0.97rem;
+        }
+        .extra-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0.1rem;
+            color: #1a3a5c;
+            font-weight: 700;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .cv-wrapper {
+                padding: 1.8rem 1.5rem;
+            }
+            .cv-header h1 {
+                font-size: 2.2rem;
+            }
+            .cv-header .contact-line {
+                flex-direction: column;
+                gap: 0.2rem;
+                align-items: center;
+            }
+            .cv-header .contact-line .sep {
+                display: none;
+            }
+            .skills-block {
+                grid-template-columns: 1fr;
+                gap: 0.2rem;
+            }
+            .skills-block .skill-line {
+                flex-wrap: wrap;
+            }
+            .skills-block .skill-line .label {
+                min-width: 100%;
+            }
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+            .project-item .project-head {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .edu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.2rem;
+            }
+            .section-title {
+                font-size: 1.1rem;
+            }
+        }
+        @media (max-width: 500px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .cv-wrapper {
+                padding: 1.2rem 1rem;
+            }
+            .cv-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            body {
+                background: white;
+                padding: 0.3in;
+            }
+            .cv-wrapper {
+                box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+            }
+            .project-item .project-head .tech {
+                background: #eef2f6;
+            }
+            .edu-item {
+                border-bottom: 1px solid #e8edf2;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-wrapper">
+
+        <!-- ===== HEADER ===== -->
+        <div class="cv-header">
+            <h1>Soumya Ranjan Rout</h1>
+            <div class="contact-line">
+                <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/soumya-ranjan-rout-22800b326/" target="_blank">linkedin.com/in/soumya-ranjan-rout</a></span>
+                <span class="sep">|</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:srrout780@gmail.com">srrout780@gmail.com</a></span>
+                <span class="sep">|</span>
+                <span><i class="fas fa-phone-alt"></i> +91 9779320720</span>
+            </div>
+        </div>
+
+        <!-- ===== SKILLS ===== -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-code"></i> Skills</div>
+            <div class="skills-block">
+                <div class="skill-line">
+                    <span class="label"><i class="fas fa-terminal"></i> Languages:</span>
+                    <span class="value">C, Java, Python, PHP, HTML, CSS, JavaScript</span>
+                </div>
+                <div class="skill-line">
+                    <span class="label"><i class="fas fa-globe"></i> Web Technologies:</span>
+                    <span class="value">React.js, Node.js, Express.js, MongoDB (MERN Stack), PHP</span>
+                </div>
+                <div class="skill-line">
+                    <span class="label"><i class="fas fa-tools"></i> Tools &amp; Platforms:</span>
+                    <span class="value">VS Code, Git, MongoDB, SSMS, Dev-C++</span>
+                </div>
+                <div class="skill-line">
+                    <span class="label"><i class="fas fa-users"></i> Soft Skills:</span>
+                    <span class="value">Ideation, Creativity, Active Listening, Teamwork</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PROJECTS ===== -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-folder-open"></i> Projects</div>
+
+            <div class="project-item">
+                <div class="project-head">
+                    <span class="title">Baggage – E-Commerce Website for Bags</span>
+                    <span class="tech">MERN Stack</span>
+                </div>
+                <ul>
+                    <li>Developed a full-stack e-commerce platform for selling bags using MongoDB, Express.js, React.js, and Node.js.</li>
+                    <li>Implemented product catalog, shopping cart, secure checkout, user authentication (JWT), and RESTful APIs.</li>
+                    <li>Built responsive frontend with React and managed backend services for real-time product and order management.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-head">
+                    <span class="title">AI-Based Smart Budget Tracker for Students</span>
+                    <span class="tech">HTML, CSS, Python</span>
+                </div>
+                <ul>
+                    <li>Built an intelligent expense management system to track spending habits and generate personalized saving plans.</li>
+                    <li>Integrated AI-powered budget analysis to provide actionable financial insights for students.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-head">
+                    <span class="title">Food Ordering Website (LPU Stall)</span>
+                    <span class="tech">HTML, CSS, JavaScript, PHP</span>
+                </div>
+                <ul>
+                    <li>Developed a dynamic food ordering platform for university stalls enabling menu browsing, order placement, and transaction storage.</li>
+                    <li>Implemented frontend with HTML/CSS/JavaScript and backend data handling using PHP.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-head">
+                    <span class="title">LDR-Based Street Light Model</span>
+                    <span class="tech">Electronics &amp; Sensors</span>
+                </div>
+                <ul>
+                    <li>Designed and implemented a prototype street lighting system using Light Dependent Resistors (LDRs) to automatically switch lights based on ambient light levels, demonstrating energy efficiency concepts.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== CERTIFICATIONS ===== -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-certificate"></i> Certifications</div>
+            <div class="cert-grid">
+                <div class="cert-item"><i class="fab fa-react"></i> MERN Stack (6 months) – ISO 9001 Certified</div>
+                <div class="cert-item"><i class="fas fa-laptop-code"></i> Full Stack Development – GeeksforGeeks Workshop</div>
+                <div class="cert-item"><i class="fas fa-code"></i> HackManthan 2025 – 24-Hour Hackathon</div>
+                <div class="cert-item"><i class="fas fa-shield-alt"></i> Cyber Security Hackfest Certificate</div>
+            </div>
+        </div>
+
+        <!-- ===== EDUCATION ===== -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+            <div class="edu-item">
+                <span class="edu-left">
+                    <i class="fas fa-university"></i>
+                    <strong>Diploma in Computer Science &amp; Engineering</strong>
+                </span>
+                <span class="meta">Lovely Professional University, Phagwara, Punjab · Aug 2023 – Jul 2026</span>
+            </div>
+            <div class="edu-item">
+                <span class="edu-left">
+                    <i class="fas fa-school"></i>
+                    <strong>Matriculation</strong>
+                </span>
+                <span class="meta">International Public Sr. Sec. School, Ludhiana, Punjab · 2022 – 2023</span>
+            </div>
+        </div>
+
+        <!-- ===== EXTRA CURRICULAR ===== -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-star"></i> Extra Curricular</div>
+            <ul class="extra-list">
+                <li>Learning German language.</li>
+                <li>Participated in Hackmanthon (October 2025) organized by Geeks for Geeks. Collaborated with a team to develop a financial tracking platform for students and workers, contributing to coding, ideation, and design.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
